@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(252, 171, 171);
+}
+.navbar{
+    background-color: rgb(44, 0, 44);
+    color: rgb(252, 171, 171);
+    height: 14vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 0 0 0 26vw; */
+    font-family: cursive;
+}
+.navtext{
+    font-size: clamp(1.5rem,4vw,2rem);
+}
+.navtext-second{
+    font-size: clamp(1.2rem,4vw,1rem);
+    margin-left: 15vw;
+    display: flex;
+    justify-content:end;
+}
+
+.boxContainer{
+    
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+}
+.wholeBoxContainer{
+    padding: 10vh 0 0 20vw;
+    display: flex;
+    /* align-items: center; */
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px black;
+    cursor: pointer;
+}
+.box:hover{
+    background-color: rgb(211, 148, 159);
+}
+
+.boxtext{
+    font-size: clamp(2rem,9vw,9rem);
+    font-weight: 520;
+    font-family: sans-serif;
+}
+
+/* Removing Borders With below classes */
+
+.bt{
+    border-top: none;
+}
+.bl{
+    border-left: none;
+}
+.bb{
+    border-bottom: none;
+}
+.br{
+    border-right: none;
+}
+
+.gameInfo{
+    padding: 2vw 10vw 10vw 10vw;
+    /* padding-left: 10vw; */
+    font-family: cursive;
+}
+.imgBox img{
+    width: 0;
+    transition: width 0.5s ease-in-out;
+}
+
+
+#reset-span{
+    cursor: default;
+    font-size: 2vw;
+    background-color: rgb(252, 171, 171);
+    margin-left: 3vw;
+    
+
+}
+#reset{
+    font-size: 2vw;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 3vw;
+    height: 3vw;
+    background-color: rgb(252, 171, 171);    
+}
+#reset:hover{
+    background-color: rgb(44, 0, 44);
+    color: #fff;    
+} 
+
+
+@media screen and (max-width: 800px)
+{
+    .wholeBoxContainer{
+        flex-wrap:wrap;
+    }
+    .gameInfo{
+        margin-top: 5vh;
+        font-size: 1.5rem;
+    }
+    #reset-span{
+        font-size: 1.5rem;
+    }
+    .boxContainer{
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+    }
+
+}
